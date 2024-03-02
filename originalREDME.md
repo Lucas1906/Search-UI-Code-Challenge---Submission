@@ -97,3 +97,65 @@ Scenario: The user shall be informed if no search results match their query
   When there are no results matching their search query
   Then the message "There are no results matching your query." is displayed
 ```
+
+This candidate passed:
+
+Demonstrated good separation of concerns (e.g., search state).
+Avoided unnecessary re-rendering.
+Utilized a solid understanding of layout using a third-party UI library (e.g., MUI).
+Maintained low complexity in most files.
+Implemented typescript.
+Implemented all requirements.
+Separated the search form and search results.
+Utilized Tailwind for styling.
+Incorporated accessibility properties.
+Added e2e test
+React query
+Added ErrorBoundary
+Used React query utility
+Suspense Hook
+Good separation
+These are negatives from candidates that failed:
+
+Not all requirements were implemented, including:
+The title should be a link that opens in a new tab.
+Not using everything inside a <header> tag.
+The component name is overly descriptive and contains unnecessary responsibilities.
+Incorrect usage of useEffect for stopping loading.
+Using a controlled input instead of a ref, leading to unnecessary re-renders.
+The initial state of the result should start as undefined.
+Displaying a message for no results when the user hasn't entered any value.
+Console warnings present.
+UI components have excessive responsibilities.
+Fetch requests made inside UI components.
+Declared but unused variables.
+Unused interfaces and variables.
+Table components could be separated into smaller chunks in other files.
+Didn’t use an object literal to handle categories.
+Failed to manage the loading state at the request level.
+Each component has a typo.
+Exporting types and interfaces unnecessarily.
+Some functions are using (e: any) instead of implementing type safety in event handlers.
+Only a single commit.
+Used Tailwind but still applied classes in a global CSS file for typography.
+Design is not aesthetically pleasing.
+Used a single state for the input and loading, which could lead to unnecessary rerenders.
+Not all requirements were implemented:
+The title should be a link that opens in a new tab.
+Using everything inside a <header> tag.
+The component name is not very descriptive and contains more responsibilities than necessary.
+Incorrect usage of useEffect for stopping loading.
+Not using a ref for the input; using a controlled input will cause unnecessary re-renders with every new character inserted.
+The initial state of the result should start as undefined.
+When the user hasn't entered any value, we see a message saying there are no results for this query, but the user didn't query for anything.
+A warning is appearing in the console.
+UI components have more responsibilities than necessary.
+Adding a fetch request inside a UI component.
+Declaring a variable and not using that variable.
+Forgetting to delete interfaces and variables that are not used.
+Could have separated the Table components into smaller chunks in other files.
+Added unnecessary complexity with recoil state management
+Increase of bundle size with unnecessary package to resolve the test
+Used split function to handle categories
+Used spread props in forms
+Created a component inside another component
